@@ -1,0 +1,18 @@
+# Keil build artifacts
+*.axf
+*.hex
+*.bin
+*.map
+*.o
+*.d
+*.lst
+
+# Keil temporary files
+*.uvgui.*
+*.bak
+*.dep
+*.crf
+
+# User/system
+.DS_Store
+Thumbs.db

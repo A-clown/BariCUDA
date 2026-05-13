@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="project_projx.xsd">
+  <SchemaVersion>2.1</SchemaVersion>
+  <Header>### uVision Project, (C) Keil Software</Header>
+  <Targets>
+    <Target>
+      <TargetName>ECG_Simulate</TargetName>
+      <ToolsetNumber>0x4</ToolsetNumber>
+      <ToolsetName>ARM-ADS</ToolsetName>
+      <TargetOption>
+        <TargetCommonOption>
+          <Device>STM32F750VBTx</Device>
+          <Vendor>STMicroelectronics</Vendor>
+          <Cpu>IRAM(0x20000000-0x2007FFFF) IROM(0x08000000-0x0807FFFF) CPUTYPE("Cortex-M7") FPU2 CLOCK(21600000)</Cpu>
+          <OutputDirectory>Objects\</OutputDirectory>
+          <OutputName>ECG_Simulate</OutputName>
+          <CreateExecutable>1</CreateExecutable>
+          <CreateHexFile>1</CreateHexFile>
+        </TargetCommonOption>
+        <TargetArmAds>
+          <Cads>
+            <VariousControls>
+              <IncludePath>..\Core\Inc;..\Drivers\CMSIS\Include;..\Drivers\CMSIS\Device\ST\STM32F7xx\Include;..\Drivers\STM32F7xx_HAL_Driver\Inc</IncludePath>
+              <Define>USE_HAL_DRIVER,STM32F750xx</Define>
+            </VariousControls>
+          </Cads>
+        </TargetArmAds>
+      </TargetOption>
+      <Groups>
+        <Group>
+          <GroupName>Application</GroupName>
+          <Files>
+            <File><FileName>main.c</FileName><FileType>1</FileType><FilePath>..\Core\Src\main.c</FilePath></File>
+            <File><FileName>ecg.c</FileName><FileType>1</FileType><FilePath>..\Core\Src\ecg.c</FilePath></File>
+            <File><FileName>usart1.c</FileName><FileType>1</FileType><FilePath>..\Core\Src\usart1.c</FilePath></File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>HAL_Driver</GroupName>
+          <Files>
+            <File><FileName>stm32f7xx_hal.c</FileName><FileType>1</FileType><FilePath>..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal.c</FilePath></File>
+            <File><FileName>stm32f7xx_hal_gpio.c</FileName><FileType>1</FileType><FilePath>..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_gpio.c</FilePath></File>
+            <File><FileName>stm32f7xx_hal_rcc.c</FileName><FileType>1</FileType><FilePath>..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_rcc.c</FilePath></File>
+            <File><FileName>stm32f7xx_hal_rcc_ex.c</FileName><FileType>1</FileType><FilePath>..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_rcc_ex.c</FilePath></File>
+            <File><FileName>stm32f7xx_hal_cortex.c</FileName><FileType>1</FileType><FilePath>..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_cortex.c</FilePath></File>
+            <File><FileName>stm32f7xx_hal_pwr.c</FileName><FileType>1</FileType><FilePath>..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_pwr.c</FilePath></File>
+            <File><FileName>stm32f7xx_hal_pwr_ex.c</FileName><FileType>1</FileType><FilePath>..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_pwr_ex.c</FilePath></File>
+            <File><FileName>stm32f7xx_hal_flash.c</FileName><FileType>1</FileType><FilePath>..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_flash.c</FilePath></File>
+            <File><FileName>stm32f7xx_hal_flash_ex.c</FileName><FileType>1</FileType><FilePath>..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_flash_ex.c</FilePath></File>
+            <File><FileName>stm32f7xx_hal_dac.c</FileName><FileType>1</FileType><FilePath>..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dac.c</FilePath></File>
+            <File><FileName>stm32f7xx_hal_dac_ex.c</FileName><FileType>1</FileType><FilePath>..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dac_ex.c</FilePath></File>
+            <File><FileName>stm32f7xx_hal_uart.c</FileName><FileType>1</FileType><FilePath>..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_uart.c</FilePath></File>
+          </Files>
+        </Group>
+      </Groups>
+    </Target>
+  </Targets>
+</Project>
